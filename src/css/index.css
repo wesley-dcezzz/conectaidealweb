@@ -1,0 +1,139 @@
+.apresentacao {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, #104655, #0fd2e0);
+    width: 100%;
+    height: 80vh;
+    overflow: hidden; /* Esconde tudo o que sair para fora da secção */
+    color: #fff;
+}
+
+/* Estilo compartilhado das formas */
+.forma-organica {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.1); /* Efeito translúcido */
+    border-radius: 50%; /* Transforma num círculo perfeito (ou podes usar o border-radius orgânico antes) */
+    z-index: 1;
+    margin-bottom: 50px;
+}
+
+/* Posição no canto inferior esquerdo */
+.forma-organica.esquerda {
+    bottom: -50px;
+    left: -50px;
+}
+
+/* Posição no canto superior direito */
+.forma-organica.direita {
+    top: -60px;
+    right: -60px;
+    width: 350px; /* Podes mudar o tamanho se quiseres maior ou menor */
+    height: 350px;
+}
+
+.apresentacao img {
+    height: 65vh;
+    border-radius: 25px;
+    padding: 25px;
+    margin-right: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.apresentacao-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-left: 25px;
+}
+
+.apresentacao-container h1 {
+    font-size: 4.5rem;
+}
+
+.idealconecta {
+    color: #0C4C8A;
+    font-size: 0.6rem;
+    font-weight: bold;
+    display: inline-block; /* Faz a caixa encolher e ocupar apenas o espaço do conteúdo */
+    width: fit-content;
+    background-color: rgb(255, 255, 255); /* O teu fundo translúcido */
+    border: 1px solid rgba(255, 255, 255, 0.3);  /* A tua borda */
+    padding: 8px 16px;                            /* Espaçamento interno à volta do texto */
+    border-radius: 20px;
+}
+
+#explorarNoticias {
+    border-radius: 10px;
+    padding: 10px;
+    padding-top: 13px;
+    min-width: 180px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #142D54;
+    background-color: rgb(255, 255, 0);
+    border: 1px solid rgb(163, 163, 7);
+}
+
+#assistirIdealTv {
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 8px;
+    min-width: 180px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.192);
+    border: 1px solid rgba(255, 255, 255, 0.664);
+}
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: -30px auto 0 auto;
+    gap: 15px;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1000;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 30px 20px;
+    line-height: 1.9;
+    text-align: center;
+}
+
+.card p {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+/* QUANDO A TELA FOR MENOR QUE 768px (Tablets e Celulares) */
+@media (max-width: 768px) {
+
+    .container-cards {
+        grid-template-columns: 1fr; /* Transforma em apenas 1 coluna empilhada */
+        padding: 45px 10px 0 10px;
+    }
+
+    .apresentacao {
+        height: 60vh;
+    }
+
+    .apresentacao img {
+        display: none;
+    }
+
+    .apresentacao-container h1 {
+        font-size: 3rem;
+    }
+
+   
+}

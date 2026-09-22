@@ -1,0 +1,82 @@
+
+#lista-eventos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Exatamente 2 colunas lado a lado */
+    gap: 30px; /* Espaçamento elegante entre os blocos */
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.card-evento {
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Moldura que segura a imagem para travar o zoom dentro dos cantos arredondados */
+.event-img-wrapper {
+    width: 100%;
+    height: 200px; /* Altura padrão para o banner */
+    border-radius: 12px; /* Cantos arredondados */
+    overflow: hidden; /* Esconde a parte da imagem que cresce no zoom */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* A imagem com o efeito de zoom suave */
+.img-evento {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Transição fluida da animação */
+}
+
+/* Efeito de Zoom ao passar o mouse por cima do card */
+.card-evento:hover .img-evento {
+    transform: scale(1.08); /* Aumenta levemente a imagem dentro da moldura */
+}
+
+/* Estilização dos textos abaixo da imagem */
+.conteudo-evento {
+    padding-top: 12px;
+}
+
+.data-evento {
+    font-size: 0.85rem;
+    color: #666;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.titulo-evento {
+    font-size: 1.1rem;
+    color: #111;
+    margin: 0 0 6px 0;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.texto-evento {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+}
+
+#carregar-mais {
+    display: block;
+    width: 200px;
+    margin: 40px auto; /* Centraliza o botão perfeitamente na tela e dá espaço em cima/baixo */
+    background-color: #00d2ff;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 20px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#carregar-mais:hover {
+    background-color: #00b4d8;
+}

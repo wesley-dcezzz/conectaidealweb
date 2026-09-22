@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+.btn-hamburguer {
+    display: none; /* Escondido por padrão no computador */
+    position: fixed; /* Fixado na tela para acompanhar o scroll */
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* Fica por cima de tudo */
+    background-color: #0b192c;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.5rem;
+    padding: 8px 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.topo {
+    display: flex;
+    justify-content:space-between;
+    padding: 10px 45px 10px 45px;
+    background-color: #142D54;
+    width: 100%;
+}
+
+.topo p {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 13px;
+    color: #dfdcdc;
+}
+
+.menu {
+    display: flex;
+    height: 12vh;
+    justify-content:space-around;
+    align-items: center;
+}
+
+.menu img {
+    height: 65px;
+}
+
+.links-nav {
+    display: flex;
+    gap: 35px;
+    font-size: 13px;
+}
+
+.links-nav a {
+    text-decoration: none;
+    color: #142D54;
+    font-weight: bold;
+}
+
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Cria 3 colunas iguais */
+    gap: 30px;
+    background-color: #0b192c; /* Cor de fundo escura, ajuste se preferir */
+    color: #fff;
+    padding: 40px 20px 20px 20px;
+    margin-top: 60px;
+}
+
+.logo-footer {
+    padding-left: 60px;
+}
+
+.logo-footer img {
+    width: 75px;
+    background: #142D54;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.links-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.logo-footer p {
+    font-size: 0.7rem;
+    color: #b4b3b3;
+}
+
+.links-footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.links-footer a:hover {
+    color: #38bdf8;
+}
+
+.contato-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #cbd5e1;
+}
+
+.contato-footer a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.contato-footer a:hover {
+    color: #1eff00;
+}
+
+footer > div:last-child {
+    grid-column: 1 / -1; 
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+
+
+html, body {
+    background-color: #ebebeb;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden; /* Impede qualquer conteúdo de vazar para os lados e gerar rolagem horizontal */
+}
+
+/* QUANDO A TELA FOR MENOR QUE 768px (Celular) */
+@media (max-width: 768px) {
+
+    .topo {
+        position: relative;
+        height: 60px; /* Dá uma altura fixa para sobrar espaço vertical para os dois cantos */
+        padding: 8px 12px;
+    }
+
+    .topo p:first-child {
+        padding-left: 5px;
+        position: absolute;
+        top: 8px;
+        left: 12px;
+        font-size: 0.8rem;
+    }
+
+    /* Pega o segundo parágrafo e joga no canto inferior direito */
+    .topo p:last-child {
+        padding-right: 5px;
+        position: absolute;
+        bottom: 8px;
+        right: 12px;
+        font-size: 0.8rem;
+        text-align: right;
+    }
+
+    footer {
+        grid-template-columns: 1fr; /* Transforma o rodapé em 1 única coluna */
+        text-align: center;         /* Centraliza os textos e logos para ficar bonito no mobile */
+    }
+
+    .logo-footer {
+        padding: 0;
+    }
+
+    .btn-hamburguer {
+        display: block; /* O botão aparece no celular */
+        margin-top: 60px;
+    }
+
+    /* Esconde o menu horizontal padrão e transforma na gaveta lateral */
+    .menu .links-nav {
+        position: fixed;
+        top: 0;
+        right: -100%; /* Fica escondido fora da tela à direita */
+        width: 75%;
+        height: 100vh;
+        background-color: #0b192c;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        transition: right 0.4s ease-in-out; /* Transição suave */
+        z-index: 9998;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+    /* Classe que o JavaScript adiciona para abrir o menu */
+    .menu .links-nav.ativo {
+        right: 0; 
+    }
+
+    /* Estilo dos links dentro do menu mobile */
+    .menu .links-nav a {
+        color: #fff;
+        font-size: 1.1rem;
+        text-decoration: none;
+    }
+
+    .menu  {
+        display: flex;
+        align-items: center;          /* Alinha a logo e o botão verticalmente ao centro */
+        justify-content: space-between; /* Joga a logo para a esquerda e o botão para a direita */
+        padding: 10px 20px;
+    }
+}
+
+
+
