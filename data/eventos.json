@@ -4,7 +4,7 @@
         "titulo": "teste 1 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste1.jpg",
+        "imagem": "/imagens/imagens-eventos/teste1.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -12,7 +12,7 @@
         "titulo": "teste 2 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste2.jpg",
+        "imagem": "/imagens/imagens-eventos/teste2.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -20,7 +20,7 @@
         "titulo": "teste 3 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste3.jpg",
+        "imagem": "/imagens/imagens-eventos/teste3.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -28,7 +28,7 @@
         "titulo": "teste 4 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste4.jpg",
+        "imagem": "/imagens/imagens-eventos/teste4.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -36,7 +36,7 @@
         "titulo": "teste 5 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste5.jpg",
+        "imagem": "/imagens/imagens-eventos/teste5.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -44,7 +44,7 @@
         "titulo": "teste 6 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste6.jpg",
+        "imagem": "/imagens/imagens-eventos/teste6.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -52,7 +52,7 @@
         "titulo": "teste 7 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste7.jpg",
+        "imagem": "/imagens/imagens-eventos/teste7.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -60,7 +60,7 @@
         "titulo": "teste 8 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste8.jpg",
+        "imagem": "/imagens/imagens-eventos/teste8.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -68,7 +68,7 @@
         "titulo": "teste 9 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste9.jpg",
+        "imagem": "/imagens/imagens-eventos/teste9.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -76,7 +76,7 @@
         "titulo": "teste 10 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste10.jpg",
+        "imagem": "/imagens/imagens-eventos/teste10.jpg",
         "texto": "evento muito importante"
     },
     {
@@ -84,7 +84,7 @@
         "titulo": "teste 11 evento...",
         "data": "19/09/2025",
         "local": "Igreja Aracoiaba",
-        "imagem": "/src/imagens/imagens-eventos/teste11.jpg",
+        "imagem": "/imagens/imagens-eventos/teste11.jpg",
         "texto": "evento muito importante"
     }
 ]
