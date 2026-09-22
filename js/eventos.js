@@ -3,7 +3,7 @@ let itensPorPagina = 10;
 let indiceAtual = 0;
 
 //fetch para buscar eventos no json e chamar o método
-fetch("/data/eventos.json")
+fetch("data/eventos.json")
   .then((resposta) => resposta.json())
   .then((dados) => {
     eventos = dados;
