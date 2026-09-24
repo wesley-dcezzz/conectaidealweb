@@ -110,6 +110,10 @@
     z-index: 1000;
 }
 
+.container-cards a {
+    text-decoration: none;
+}
+
 .card {
     background-color: #fff;
     border-radius: 20px;
@@ -186,6 +190,32 @@
     transform: translateX(0);
 }
 
+.container-hino {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+    margin-left: 20%;
+}
+
+.container-hino h2 {
+    color: #142D54;
+    border-bottom: 3px solid #142D54;
+    width:fit-content;
+}
+
+.container-hino .autor-hino {
+    color: gray;
+    padding-top: 5px;
+}
+
+.container-hino #letra-hino {
+    padding-top: 10px;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+
 /* QUANDO A TELA FOR MENOR QUE 768px (Tablets e Celulares) */
 @media (max-width: 768px) {
 
@@ -241,7 +271,6 @@
 
     .container-ultimo-evento h3 {
         font-size: 1.2rem;
-        text-transform: capitalize;
     }
 
     .container-ultimo-evento .conteudo-evento {
@@ -255,5 +284,14 @@
 
     .conteudo-evento p {
         text-align: left;
+    }
+
+    .container-hino {
+        margin-left: 20px;
+        margin-top: 25px;
+    }
+
+    .container-hino h2 {
+        font-size: 1.5rem;
     }
 }
