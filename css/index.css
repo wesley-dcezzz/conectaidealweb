@@ -70,7 +70,7 @@
 
 #explorarEventos {
     border-radius: 10px;
-    padding: 10px;
+    padding: 0.625rem;
     min-width: 180px;
     font-weight: bold;
     font-size: 0.9rem;
@@ -82,7 +82,7 @@
 
 #explorarGaleria {
     border-radius: 10px;
-    padding: 10px;
+    padding: 0.625rem;
     margin-left: 8px;
     min-width: 180px;
     font-weight: bold;
@@ -92,6 +92,13 @@
     border: 1px solid rgba(255, 255, 255, 0.664);
     text-decoration: none;
 }
+
+.apresentacao-container div {
+    position: relative;
+    z-index: 10;
+}
+
+
 
 .container-cards {
     display: grid;
@@ -116,8 +123,79 @@
     color: gray;
 }
 
+.container-ultimo-evento {
+    display: grid;
+    grid-template-columns: repeat(2, 550px);
+    width: 100%;
+    gap: 15px 60px;
+    margin: 50px 10px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+
+    /* Estado inicial da animação de scroll (invisível e deslocada para a esquerda) */
+    opacity: 0;
+    transform: translateX(-80px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.container-ultimo-evento h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #07325e;
+    grid-column: 1 / -1;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border-bottom: 3px solid #142D54;
+}
+
+.container-ultimo-evento .event-img-wrapper {
+    width: 100%;
+    height: 320px; /* Um banner maior para dar destaque na home */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgb(0, 0, 0);
+}
+
+.container-ultimo-evento .imagem-evento {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.container-ultimo-evento .conteudo-evento {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.conteudo-evento h3 {
+    font-size: 2rem;
+}
+
+.conteudo-evento span, 
+.conteudo-evento p{
+    color: rgb(102, 100, 100);
+    font-weight: bold;
+}
+
+/* Estado final quando a classe 'ativo' é adicionada via JavaScript */
+.container-ultimo-evento.ativo {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 /* QUANDO A TELA FOR MENOR QUE 768px (Tablets e Celulares) */
 @media (max-width: 768px) {
+
+    .menu {
+        height: auto;
+    }
+
+    .idealconecta {
+        margin-top: 15px;
+    }
 
     .container-cards {
         grid-template-columns: 1fr; /* Transforma em apenas 1 coluna empilhada */
@@ -125,7 +203,8 @@
     }
 
     .apresentacao {
-        height: 60vh;
+        height: auto; /* Deixa a altura automática baseada no conteúdo */
+        padding-bottom: 40px; /* Dá um respiro abaixo dos botões */
     }
 
     .apresentacao img {
@@ -137,5 +216,44 @@
         
     }
 
-   
+    .container-ultimo-evento {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+        padding: 10px;
+        margin: 10px 0;
+    }
+
+    .container-ultimo-evento h2 {
+        font-size: 2.5rem;
+        margin-left: 1.5rem;
+    }
+
+    .container-ultimo-evento .imagem-evento {
+        padding: 0 10px;
+    }
+
+    .container-ultimo-evento .event-img-wrapper {
+        border: 1px solid rgb(0, 0, 0);
+        box-shadow: 0 0 0;
+    }
+
+    .container-ultimo-evento h3 {
+        font-size: 1.2rem;
+        text-transform: capitalize;
+    }
+
+    .container-ultimo-evento .conteudo-evento {
+        margin-left: 0.7rem;
+    }
+
+    .conteudo-evento span, 
+    .conteudo-evento p {
+        font-size: 0.9rem;
+    }
+
+    .conteudo-evento p {
+        text-align: left;
+    }
 }

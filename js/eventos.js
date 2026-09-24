@@ -30,7 +30,7 @@ function exibirEventos() {
       <div class="conteudo-evento">
           <span class="data-evento">${evento.data} — ${evento.local}</span>
           <h2 class="titulo-evento">${evento.titulo}</h2>
-          <p class="texto-evento">${evento.texto}</p>
+          <p class="resumo-evento">${evento.resumo}</p>
       </div>
     `;
 
